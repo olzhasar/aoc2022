@@ -28,7 +28,7 @@ int main() {
   int rolling_max = 0;
 
   while(fgets(line, bufferlength, fp) != NULL) {
-    if (strlen(line) <= 1) {
+    if (line[0] == '\n') {
       updateMax(rolling_max);
       rolling_max = 0;
       continue;
