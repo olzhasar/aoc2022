@@ -2,6 +2,13 @@
 #import <stdlib.h>
 #import <string.h>
 
+int all_max = 0;
+
+void updateMax(int val) {
+  if (val > all_max) {
+    all_max = val;
+  }
+}
 
 int main() {
   FILE *fp;
@@ -9,21 +16,18 @@ int main() {
   char line[bufferlength];
 
   fp = fopen("input.txt", "r");
-  int all_max = 0;
   int rolling_max = 0;
 
   while(fgets(line, bufferlength, fp) != NULL) {
-    if (strlen(line) <= 1) {
+    if (line[0] == '\n') {
+      updateMax(rolling_max);
       rolling_max = 0;
       continue;
     }
-
     rolling_max += atoi(line);
-
-    if (rolling_max > all_max) {
-      all_max = rolling_max;
-    }
   }
+
+  updateMax(rolling_max);
 
   fclose(fp);
 
