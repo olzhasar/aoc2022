@@ -53,9 +53,6 @@ int CalcOutcomeScore(int opp, int mine) {
 }
 
 int CalcScore(char opp, char mine) {
-  int shape_score = CalcShapeScore(mine);
-  int outcome_score = 3;
-
   return CalcShapeScore(mine) + CalcOutcomeScore(opp, mine);
 }
 
