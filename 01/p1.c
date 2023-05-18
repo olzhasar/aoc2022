@@ -9,7 +9,6 @@ int main() {
   char line[bufferlength];
 
   fp = fopen("input.txt", "r");
-  int current;
   int all_max = 0;
   int rolling_max = 0;
 
@@ -19,8 +18,7 @@ int main() {
       continue;
     }
 
-    current = atoi(line);
-    rolling_max += current;
+    rolling_max += atoi(line);
 
     if (rolling_max > all_max) {
       all_max = rolling_max;
