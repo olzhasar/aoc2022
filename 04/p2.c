@@ -2,7 +2,7 @@
 #import <stdlib.h>
 #import <string.h>
 
-#define BUFF_SIZE 255
+#define BUFF_SIZE 32
 
 
 int main() {
