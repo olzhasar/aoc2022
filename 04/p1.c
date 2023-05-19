@@ -24,6 +24,8 @@ int main() {
 
   }
 
+  printf("%d\n", count);
+
   fclose(fp);
 
   return 1;
