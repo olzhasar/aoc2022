@@ -21,8 +21,7 @@ int main() {
     if (
 	(a_start >= b_start & a_start <= b_end) | 
 	(a_end >= b_start & a_end <= b_end) |
-	(b_start >= a_start & b_start <= a_end) |
-	(b_end >= a_start & b_end <= a_end)
+	(b_start >= a_start & b_start <= a_end)
 	) {
       count++;
     }
