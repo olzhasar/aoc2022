@@ -18,7 +18,7 @@ int main() {
 
     sscanf(line, "%i-%i,%i-%i", &a_start, &a_end, &b_start, &b_end);
 
-    if ((a_start >= b_start & a_end <= b_end) | (b_start >= a_start & b_end <= a_end) ) {
+    if ((a_start >= b_start && a_end <= b_end) | (b_start >= a_start && b_end <= a_end) ) {
       count++;
     }
 
